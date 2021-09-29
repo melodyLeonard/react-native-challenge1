@@ -1,0 +1,37 @@
+export default {
+  colors: {
+    primary: '#3EAB9C',
+    primary_background: '#ffffff',
+    primary_card: '#F5F5F5',
+    orange: '#EF8836',
+    dark_orange: '#FF5D00',
+    gray_text: '#878787',
+    pink: '#ff3e96',
+    light_black: '#010101',
+    accent: '#FF7121',
+    background: '#F4FAFF',
+    text: '#334D4D',
+    white: '#FFFFFF',
+    variationBtn: '#DBEAFF',
+    _1: '#333333',
+    _2: '#535353',
+    _3: '#F3F3F3', // whitesmoke
+    _4: '#F15887',
+    _5: '#6B6B6B',
+    _6: '#F0A6BD',
+    _7: '#3DA',
+    _8: '#fda',
+    _9: '#8fd3f4', // lightblue
+    _10: '#84fab0', // lightgreen
+    _11: 'orange',
+    _12: 'light_gray',
+    _13: '#C7C7C7',
+    success: '#69b00b',
+    yellow: '#F3DC0B',
+    danger: 'crimson',
+    shadow: 'rgba(0,0,0,.10)',
+    shadow_text: 'rgba(0,0,0,.70)',
+    coloredShadow: 'rgba(3, 255, 220, 0.16)',
+    line_border: 'rgba(0, 0, 0, 0.06',
+  },
+};

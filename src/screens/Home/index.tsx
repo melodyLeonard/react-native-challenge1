@@ -11,7 +11,7 @@ import useTheme from '../../hooks/useTheme';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const avatar =
-  'https://static.wikia.nocookie.net/intothebadlands/images/d/dd/ItB_S1_E2_0303.jpg/revision/latest/top-crop/width/300/height/300?cb=20180624130831';
+  'https://media-exp1.licdn.com/dms/image/C4E03AQGQtl1FIPZ64A/profile-displayphoto-shrink_800_800/0/1621596276504?e=1638403200&v=beta&t=4kRotKMqTtNP00pzPgc4RMs6l8LhnkLcF8ASe7Q0CQA';
 
 const Home: FC = () => {
   const {colors, gutter} = useTheme();

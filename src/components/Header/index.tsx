@@ -30,12 +30,7 @@ const Header: FC<IProps> = ({profile}) => {
             }}>
             {getUserLocation()?.latitude || 'Hello'}
           </Paragraph>
-          <Paragraph
-            style={{
-              fontSize: getUserLocation()?.latitude ? font.sm : font.normal,
-            }}>
-            {getUserLocation()?.latitude || 'Hello'}
-          </Paragraph>
+
           <Lead>Melody Leonard</Lead>
         </View>
       </Flex.Row>

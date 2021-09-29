@@ -95,7 +95,9 @@ const Home: FC = () => {
 
           <TransactionItem
             color={colors.success}
-            icon={<Paragraph>Me</Paragraph>}
+            icon={
+              <Ionicons name="logo-angular" size={34} color={colors.white} />
+            }
             amount={280}
             title="Dribble"
             subTitle="Payment Received"
@@ -103,7 +105,9 @@ const Home: FC = () => {
           />
           <TransactionItem
             color={colors.danger}
-            icon={<Paragraph>Me</Paragraph>}
+            icon={
+              <Ionicons name="logo-firefox" size={34} color={colors.white} />
+            }
             amount={280}
             title="Google Wallet"
             subTitle="Payment via wallet can be done"
@@ -111,7 +115,9 @@ const Home: FC = () => {
           />
           <TransactionItem
             color={colors.pink}
-            icon={<Paragraph>Me</Paragraph>}
+            icon={
+              <Ionicons name="logo-github" size={34} color={colors.white} />
+            }
             amount={280}
             title="Dribble"
             subTitle="Payment Received"

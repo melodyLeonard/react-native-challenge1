@@ -1,9 +1,10 @@
-import React, {FC, useState} from 'react';
+import React, {FC, useEffect} from 'react';
 import {Image, StyleSheet, ImageStyle, ViewStyle, View} from 'react-native';
 import {Flex, Paragraph, Lead} from '../Typography';
 import Icon from 'react-native-vector-icons/Ionicons';
 import global from '../../global/index';
 import {getUserLocation} from '../../global/global.function';
+import useTheme from '../../hooks/useTheme';
 
 interface IProps {
   profile: string;
@@ -17,13 +18,23 @@ interface IStyle {
 }
 
 const Header: FC<IProps> = ({profile}) => {
+  const {font} = useTheme();
   return (
     <Flex.Row style={styles.container}>
       <Flex.Row>
         <Image style={styles.avatar} source={{uri: profile}} />
         <View style={styles.nameContainer}>
-          <Paragraph>
-            {JSON.stringify(getUserLocation(), 0, 2) || 'Hello'}
+          <Paragraph
+            style={{
+              fontSize: getUserLocation()?.latitude ? font.sm : font.normal,
+            }}>
+            {getUserLocation()?.latitude || 'Hello'}
+          </Paragraph>
+          <Paragraph
+            style={{
+              fontSize: getUserLocation()?.latitude ? font.sm : font.normal,
+            }}>
+            {getUserLocation()?.latitude || 'Hello'}
           </Paragraph>
           <Lead>Melody Leonard</Lead>
         </View>

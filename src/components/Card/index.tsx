@@ -52,12 +52,12 @@ const CardItem: FC<IProps> = ({
           </Paragraph>
         </View>
         <Paragraph style={{fontSize: font.lg, color: colors._3}}>
-          {numberWithCommas(amount)}
+          ${numberWithCommas(amount)}
         </Paragraph>
       </Flex.Row>
       <Flex.Row>
-        <Lead style={{color: colors._3}}>
-          **** **** **** ${number.slice(-2)}
+        <Lead style={{color: colors._3, fontSize: font.md}}>
+          **** **** **** {number.slice(-4)}
         </Lead>
       </Flex.Row>
 

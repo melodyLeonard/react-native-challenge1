@@ -1,7 +1,11 @@
 import {Dimensions, Platform, PixelRatio, Alert} from 'react-native';
 const {width: SCREEN_WIDTH} = Dimensions.get('window');
-import GetLocation from 'react-native-get-location';
-import {locationErrorMapper} from './constant';
+import RNLocation from 'react-native-location';
+import {locationConfig, locationErrorMapper} from './constant';
+
+RNLocation.configure({
+  distanceFilter: undefined,
+});
 
 const guidelineBaseWidth = 320;
 const scale = (size: number) => (SCREEN_WIDTH / guidelineBaseWidth) * size;
@@ -20,12 +24,11 @@ export const numberWithCommas = (x: number) => {
 };
 
 export const getUserLocation = async () => {
-  GetLocation.getCurrentPosition({
-    enableHighAccuracy: true,
-    timeout: 50000,
-  })
-    .then(data => {
-      return data;
-    })
-    .catch(({code}) => Alert.alert(locationErrorMapper[code]));
+  let permission = await RNLocation.checkPermission({...locationConfig});
+  if (!permission) {
+    permission = await RNLocation.requestPermission({...locationConfig});
+    return await RNLocation.getLatestLocation({timeout: 100});
+  } else {
+    return await RNLocation.getLatestLocation({timeout: 100});
+  }
 };
